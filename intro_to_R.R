@@ -74,11 +74,12 @@ myMean
 # A set of thrid-party functions that you add to
 # R is called a "library". To use those functions
 # you nead to load the library.
-# For example, the library called "cummeRbund"
-# is a suite of tools for processing RNA-Seq data. 
+# For example, the library called "ggplot2"
+# is a suite of tools for making more
+# sofisticated figures than the base functions. 
 # You load it with the library() function:
 
-library(cummeRbund)
+library(ggplot2)
 
 # Often, you will need to import your data into
 # R in order to process it. One way is to "read"
@@ -124,7 +125,7 @@ heatmap(myDataMat, main = "My RNA-Seq Experiment")
 # but we can change them with "col ="
 # like so:
 
-heatmap(myDataMatrix, main = "My RNA-Seq Experiment", col = cm.colors(256))
+heatmap(myDataMat, main = "My RNA-Seq Experiment", col = cm.colors(256))
 
 
 
