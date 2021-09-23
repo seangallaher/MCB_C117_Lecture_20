@@ -12,7 +12,7 @@
 # and it must start with a letter. You can put text or a number
 # into the object. For example:
 
-myVariable1 <- "my text" 
+myVariable1 <- "Hello PlantBi 135!" 
 
 myVariable2 <- 42
 
