@@ -84,12 +84,12 @@ library(ggplot2)
 # Often, you will need to import your data into
 # R in order to process it. One way is to "read"
 # in a text file of data. There is a text file
-# in this repository that contains sample
-# RNA-Seq data. To load it into your R
-# environment, use the read.delim() function
-# like so:
+# in the PlantBi135_lecture13 folder
+#  that contains sample RNA-Seq data. 
+# To load it into your R environment, 
+# use the read.delim() function like so:
 
-myData <- read.delim(file = "sample_data.txt")
+myData <- read.delim(file = "PlantBi135_lecture13/sample_data.txt")
 
 # Take a look at the data. It contains 
 # gene expression values for 10 genes
@@ -113,7 +113,7 @@ myDataMat <- as.matrix(myData)
 
 heatmap(myDataMat)
 
-# We can add "arguements" to the 
+# We can add "arguments" to the 
 # heatmap() function to change
 # how the heatmap looks. 
 # For example, to add a main title,
