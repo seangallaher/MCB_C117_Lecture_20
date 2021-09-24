@@ -113,19 +113,48 @@ myDataMat <- as.matrix(myData)
 
 heatmap(myDataMat)
 
-# We can add "arguments" to the 
-# heatmap() function to change
-# how the heatmap looks. 
-# For example, to add a main title,
-# we "main = " like so:
+# I prefer pheatmap to the basic heatmap function
+# that comes with R. Let's load the pheatmap 
+# library like so:
 
-heatmap(myDataMat, main = "My RNA-Seq Experiment")
+library(pheatmap)
 
-# I am not crazy about these colors,
-# but we can change them with "col ="
-# like so:
+# Now take a look at the defaults
+# with pheatmap:
 
-heatmap(myDataMat, main = "My RNA-Seq Experiment", col = cm.colors(256))
+pheatmap(myDataMat,)
 
+# Not bad. But can customize the 
+# plot. You do this with 
+# arguments, which you put in the 
+# parentheses, separated by commas.
+# The argument to add a main title
+# is called main. Let's try it:
 
+pheatmap(myDataMat, main = "My RNA-Seq Experiment")
 
+# I don't want to reorder the columns.
+# Let's turn that off. That argument
+# is called "cluster_cols". We want
+# to make that false.
+
+pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE)
+
+# Better, but I am not crazy about these colors,
+# but we can change them with "color" argument.
+
+pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE, heat.colors(256))
+
+# When we have a lot of arguments, we can put
+# them on separate lines. This makes it more
+# readable. Here is an example:
+
+pheatmap(myDataMat, 
+         main = "My RNA-Seq Experiment", 
+         cluster_cols = FALSE,
+         heat.colors(256))
+
+# If we are happy with our heatmap, we can 
+# it as a PDF or other image format. In
+# Rstudio, look for the "Export" button
+# just above your plot. 
