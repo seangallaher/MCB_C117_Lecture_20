@@ -6,6 +6,7 @@
 # notes to yourself about what you are doing. It makes
 # your R-code more understandable to others.
 
+
 # You can create a variable in R by typing an arrow using
 # the "<" and "-" keys. You can name it whatever you 
 # want with letters and numbers (no spaces or special characters)
@@ -85,11 +86,11 @@ library(ggplot2)
 # R in order to process it. One way is to "read"
 # in a text file of data. There is a text file
 # in the PlantBi135_lecture13 folder
-#  that contains sample RNA-Seq data. 
+# that contains sample RNA-Seq data. 
 # To load it into your R environment, 
 # use the read.delim() function like so:
 
-myData <- read.delim(file = "PlantBi135_lecture13/sample_data.txt")
+myData <- read.delim(file = "~/PlantBi135_lecture13/sample_data.txt")
 
 # Take a look at the data. It contains 
 # gene expression values for 10 genes
@@ -114,22 +115,28 @@ myDataMat <- as.matrix(myData)
 heatmap(myDataMat)
 
 # I prefer pheatmap to the basic heatmap function
-# that comes with R. Let's load the pheatmap 
-# library like so:
+# that comes with R. It is not installed by
+# default, but we can install it with 
+# install.packages()
+
+install.packages("pheatmap")
+
+# Once it is installed, we need to
+# "load" the pheatmap library:
 
 library(pheatmap)
 
-# Now take a look at the defaults
-# with pheatmap:
+# Now take a look at the default
+# heatmap that you can make with pheatmap:
 
-pheatmap(myDataMat,)
+pheatmap(myDataMat)
 
 # Not bad. But can customize the 
 # plot. You do this with 
 # arguments, which you put in the 
 # parentheses, separated by commas.
 # The argument to add a main title
-# is called main. Let's try it:
+# is called "main". Let's try it:
 
 pheatmap(myDataMat, main = "My RNA-Seq Experiment")
 
@@ -157,4 +164,8 @@ pheatmap(myDataMat,
 # If we are happy with our heatmap, we can 
 # it as a PDF or other image format. In
 # Rstudio, look for the "Export" button
-# just above your plot. 
+# just above your plot.
+
+# Great job! Now you are using R!
+
+ 
