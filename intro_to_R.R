@@ -48,7 +48,7 @@ log10(myVariable3)
 # variables together. A string of multiple
 # variables is called a "vector". You 
 # can make a vector with the c() function.
-# "c" is short for "concatenate". Here
+# "c" is short for "combine". Here
 # is an example of making a vector with 
 # four numbers:
 
