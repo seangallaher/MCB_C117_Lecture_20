@@ -150,7 +150,7 @@ pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE)
 # Better, but I am not crazy about these colors,
 # but we can change them with "color" argument.
 
-pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE, heat.colors(256))
+pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE, color = heat.colors(256))
 
 # When we have a lot of arguments, we can put
 # them on separate lines. This makes it more
@@ -159,7 +159,7 @@ pheatmap(myDataMat, main = "My RNA-Seq Experiment", cluster_cols = FALSE, heat.c
 pheatmap(myDataMat, 
          main = "My RNA-Seq Experiment", 
          cluster_cols = FALSE,
-         heat.colors(256))
+         color = heat.colors(256))
 
 # If we are happy with our heatmap, we can 
 # it as a PDF or other image format. In
