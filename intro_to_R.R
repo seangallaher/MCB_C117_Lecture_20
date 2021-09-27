@@ -26,10 +26,31 @@ myVariable1
 
 myVariable2
 
-# You can also create an object that contains
-# a series of numbers or text with "c()". If your
-# In R, an object with a series of entries
-# is called a vector.
+# The work of R is done with "functions".
+# R comes with many functions, and you can 
+# add more or even write your own. The
+# way you know if something is a function
+# is it has parentheses after it. For example
+# log10() is a function to take the base 10
+# log of whatever you put in the parenthses.
+# Let's try it:
+
+log10(100)
+
+# You can also put a variable into the parenthses:
+
+myVariable3 <- 1000
+
+log10(myVariable3)
+
+
+# Often, you want to work with multiple 
+# variables together. A string of multiple
+# variables is called a "vector". You 
+# can make a vector with the c() function.
+# "c" is short for "concatenate". Here
+# is an example of making a vector with 
+# four numbers:
 
 myVector1 <- c(32,4,81,1000)
 
@@ -50,7 +71,6 @@ myGeneVector
 myGeneVector[2]
 
 # R contains many functions for processing data. 
-# Each function has a name followed by parenthesis.
 # For example, you can take the average of a 
 # vector of numbers with a function called mean(). 
 # Put the name of the vector in the parentheses:
