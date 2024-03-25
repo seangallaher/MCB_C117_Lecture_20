@@ -110,7 +110,7 @@ library(ggplot2)
 # To load it into your R environment, 
 # use the read.delim() function like so:
 
-myData <- read.delim(file = "~/MCB_C117_Lecture_20/sample_data.txt")
+myData <- read.delim(file = "~/MCB_C117_Lecture_20.git/sample_data.txt")
 
 # Take a look at the data. It contains 
 # gene expression values for 10 genes
