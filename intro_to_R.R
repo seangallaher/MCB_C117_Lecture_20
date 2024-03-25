@@ -13,7 +13,7 @@
 # and it must start with a letter. You can put text or a number
 # into the object. For example:
 
-myVariable1 <- "Hello PlantBi 135!" 
+myVariable1 <- "Hello MCB C117!" 
 
 myVariable2 <- 42
 
@@ -110,7 +110,7 @@ library(ggplot2)
 # To load it into your R environment, 
 # use the read.delim() function like so:
 
-myData <- read.delim(file = "~/PlantBi135_lecture13/sample_data.txt")
+myData <- read.delim(file = "~/MCB_C117_Lecture_20/sample_data.txt")
 
 # Take a look at the data. It contains 
 # gene expression values for 10 genes
@@ -180,6 +180,26 @@ pheatmap(myDataMat,
          main = "My RNA-Seq Experiment", 
          cluster_cols = FALSE,
          color = heat.colors(256))
+
+
+# I'm not crazy about those colors. Let's try another:
+
+pheatmap(myDataMat, 
+         main = "My RNA-Seq Experiment", 
+         cluster_cols = FALSE,
+         color = cm.colors(256))
+
+# I'm not crazy about that either. Let's add a library  called RColorBrewer to give us more options:
+
+library("RColorBrewer")
+
+# Now we will use RColorBrewer to choose a better color scale:
+
+pheatmap(myDataMat, 
+         main = "My RNA-Seq Experiment", 
+         cluster_cols = FALSE,
+         brewer.pal("Blues",n=9))
+
 
 # If we are happy with our heatmap, we can 
 # it as a PDF or other image format. In
